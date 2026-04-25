@@ -71,18 +71,20 @@
       box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
     }
 
-    /* Eliminación total de la rayita */
+    /* SOLUCIÓN ROBUSTA: elimina la rayita */
     .social a {
+      display: inline-block;
+      line-height: 0;
       text-decoration: none !important;
       border: none !important;
       outline: none !important;
       box-shadow: none !important;
     }
     .social img {
+      display: block;
       width: 42px;
       height: 42px;
       margin: 0 15px;
-      display: inline-block;
     }
 
     @media (max-width: 600px) {
@@ -131,14 +133,15 @@
     <footer style="margin-top:30px; padding:40px 20px;">
       <p class="social-text">¡Síguenos en nuestras redes sociales!</p>
       
-      <p>
+      <p class="social">
         <a href="https://instagram.com/sectorunovr" target="_blank">
-          <img src="instagram.png" alt="Instagram" width="42" height="42">
+          <img src="instagram.png" alt="Instagram">
         </a>
         <a href="https://tiktok.com/@sectorunovr" target="_blank">
-          <img src="tiktok.png" alt="TikTok" width="42" height="42">
+          <img src="tiktok.png" alt="TikTok">
         </a>
       </p>
+
       <p style="margin-top:35px;">© 2026 Sector Uno VR</p>
     </footer>
   </div>
