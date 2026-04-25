@@ -11,106 +11,118 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: white;
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover fixed;
+      background: #000000;
       min-height: 100vh;
       text-align: center;
     }
     .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 4.5rem;
-      margin: 40px 0 10px;
-      text-shadow: 0 0 20px #00ffcc;
+    
+    .logo {
+      width: 100%;
+      max-width: 520px;
+      margin: 40px auto 20px;
+      filter: drop-shadow(0 0 30px #ff00ff);
     }
-    .slogan {
-      font-size: 2.2rem;
-      color: #00ffcc;
-      margin-bottom: 30px;
+    
+    .slogan { 
+      font-size: 2.4rem; 
+      color: #00ffcc; 
+      margin: 10px 0 40px; 
+      text-shadow: 0 0 15px #00ffcc;
     }
     .tagline {
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-style: italic;
-      max-width: 700px;
-      margin: 0 auto 50px;
+      max-width: 720px;
+      margin: 0 auto 60px;
+      opacity: 0.95;
     }
-    section { margin: 80px 0; }
+    section { margin: 70px 0; }
+    h2 { font-size: 2rem; margin-bottom: 20px; color: #00ffcc; }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
+      margin-top: 30px;
     }
     .gallery img {
       width: 100%;
       max-width: 420px;
       border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+      box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
     }
     .btn {
       background: #00ffcc;
       color: black;
-      padding: 16px 40px;
+      padding: 18px 45px;
       border: none;
       border-radius: 50px;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: bold;
       cursor: pointer;
-      margin: 20px;
+      margin: 30px 10px;
       transition: 0.3s;
     }
     .btn:hover {
       background: #ff00aa;
       color: white;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
-    footer { margin-top: 80px; padding: 30px; opacity: 0.8; }
+    .social a {
+      font-size: 2.5rem;
+      margin: 0 20px;
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>SECTOR UNO VR</h1>
+    <!-- Logo -->
+    <img src="logo.png" alt="Sector Uno VR" class="logo">
+
     <p class="slogan">Desafía la realidad.</p>
     <p class="tagline">Si crees que conoces la realidad virtual, piensa de nuevo.</p>
 
     <section>
-      <h2>¿Qué es una Arena VR Free Roam?</h2>
-      <p style="font-size:1.3rem; max-width:700px; margin:0 auto;">
-        Es un espacio físico donde te mueves libremente con un visor VR y controles. 
-        No estás sentado ni atado: caminas, corres, te agachas y exploras mundos completamente inmersivos en grupo.
+      <h2>¿Qué es Free Roam VR?</h2>
+      <p style="font-size:1.35rem; max-width:700px; margin:0 auto; line-height:1.6;">
+        Una arena VR donde te mueves libremente en espacios reales mientras vives experiencias completamente inmersivas. 
+        Olvídate de estar sentado: caminas, corres, interactúas con tus amigos en mundos virtuales.
       </p>
     </section>
 
     <section>
-      <h2>Experiencias que encontrarás</h2>
-      <p style="font-size:1.25rem; max-width:650px; margin:30px auto;">
+      <h2>Experiencias que te esperan</h2>
+      <p style="font-size:1.3rem; max-width:680px; margin:0 auto 40px;">
         Escape Rooms en equipo • Shooters de zombies • Aventuras cooperativas • 
-        Misiones de terror • Combate táctico y mucho más.
+        Misiones de terror • Combate táctico y muchas más.
       </p>
       
       <div class="gallery">
-        <img src="https://i.imgur.com/PLACEHOLDER1.jpg" alt="Arena VR">
-        <img src="https://i.imgur.com/PLACEHOLDER2.jpg" alt="Zombie Shooter">
+        <img src="https://i.imgur.com/0Z8Y8zK.jpeg" alt="Arena VR">
+        <img src="https://i.imgur.com/5vN8vL2.jpeg" alt="Experiencia VR">
+        <img src="https://i.imgur.com/JvX9kPq.jpeg" alt="Zombie Shooter">
       </div>
     </section>
 
-    <button class="btn" onclick="suscribirse()">Quiero ser de los primeros en probarlo</button>
+    <button class="btn" onclick="suscribirse()">Quiero ser de los primeros en abrir</button>
 
-    <footer>
-      <p>Próxima apertura • Sector Uno VR</p>
-      <p style="font-size:2rem; margin:20px 0;">
-        📸 <a href="#" style="color:#00ffcc;">Instagram</a> • 
-        📘 <a href="#" style="color:#00ffcc;">Facebook</a>
+    <footer style="margin-top:60px; padding:40px 20px;">
+      <p class="social">
+        <a href="https://instagram.com/sectorunovr" target="_blank">📸</a>
+        <a href="https://tiktok.com/@sectorunovr" target="_blank">🎵</a>
       </p>
+      <p style="margin-top:30px; opacity:0.8;">Próxima apertura • Sector Uno VR</p>
       <p>© 2026 Sector Uno VR</p>
     </footer>
   </div>
 
   <script>
     function suscribirse() {
-      const email = prompt("¡Genial! Déjanos tu correo y te avisaremos en cuanto abramos:");
-      if (email) {
-        alert("✅ Gracias! Te mantendremos informado en " + email);
-      }
+      const email = prompt("¡Genial! Déjanos tu correo y te avisaremos cuando abramos:");
+      if (email) alert("✅ Gracias! Te mantendremos informado en " + email);
     }
   </script>
 </body>
