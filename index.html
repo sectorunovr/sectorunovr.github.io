@@ -4,144 +4,259 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sector Uno VR - Próxima Apertura</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500&display=swap');
-    
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: white;
-      background: #000000;
-      min-height: 100vh;
+      background: #000;
       text-align: center;
     }
-    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* HERO */
     .logo {
       width: 100%;
-      max-width: 650px;
-      margin: 40px auto 15px;
+      max-width: 600px;
+      margin: 40px auto 10px;
     }
 
-    @media (max-width: 600px) {
-      .logo { max-width: 85%; }
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-top: 10px;
     }
-    
+
     .subtitle {
-      font-size: 1.45rem;
-      color: #00ffff;
-      margin: 0 auto 50px;
-      font-weight: bold;
-      text-shadow: 0 0 15px #00ffff;
-    }
-
-    .social-text {
       font-size: 1.3rem;
-      margin-bottom: 15px;
       color: #00ffff;
+      margin-bottom: 30px;
       text-shadow: 0 0 10px #00ffff;
     }
 
-    section { margin: 55px 0; }
-    h2 { 
-      font-size: 2.2rem; 
-      margin-bottom: 20px; 
-      color: #ff00ff; 
+    /* BOTONES */
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: #00ffff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 10px;
+      transition: 0.25s;
     }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    /* SECCIONES */
+    section {
+      margin: 70px 0;
+      animation: fadeIn 0.8s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ff00ff;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* IMAGEN PRINCIPAL */
     .arena-img {
       width: 100%;
       max-width: 700px;
-      height: auto;
       border-radius: 12px;
-      box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
-      margin: 25px auto;
-      display: block;
+      margin-top: 25px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
     }
+
+    /* GALERÍA */
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       justify-content: center;
-      margin-top: 25px;
+      margin-top: 30px;
     }
+
+    .gallery-item {
+      text-align: center;
+    }
+
     .gallery img {
-      width: 100%;
-      max-width: 360px;
+      max-width: 260px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery p {
+      font-size: 0.95rem;
+      margin-top: 6px;
+      color: #ccc;
+    }
+
+    /* BLOQUE INFO */
+    .features {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* CTA FINAL */
+    .final-text {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    /* SOCIAL */
+    .social-text {
+      color: #00ffff;
+      margin-bottom: 15px;
     }
 
     .social a {
       display: inline-block;
       line-height: 0;
-      text-decoration: none !important;
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
     }
+
     .social img {
       display: block;
       width: 42px;
-      height: 42px;
-      margin: 0 15px;
+      margin: 0 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 50px;
+      padding: 30px 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMACIÓN */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
-      .social img {
-        width: 38px;
-        height: 38px;
-        margin: 0 12px;
-      }
+      .hero-title { font-size: 1.7rem; }
+      .gallery img { max-width: 100%; }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <img src="logo.png" alt="Sector Uno VR" class="logo">
-    
-    <p class="subtitle">La primera ARENA VR de la provincia de Cádiz.</p>
 
+    <!-- HERO -->
+    <img src="logo.png" alt="Sector Uno VR" class="logo">
+
+    <div class="hero-title">Arena VR en Chiclana</div>
+    <p class="subtitle">La experiencia de realidad virtual más inmersiva de Cádiz</p>
+
+    <a href="https://instagram.com/sectorunovr" class="button">Síguenos en Instagram</a>
+
+    <!-- QUE ES -->
     <section>
-      <h2>¿Qué es una ARENA VR?</h2>
-      <p style="font-size:1.35rem; max-width:700px; margin:0 auto 25px; line-height:1.6;">
-        Un espacio grande y diáfano dónde un grupo de personas se sumergen juntos en la Realidad Virtual.
+      <h2>¿Qué es una Arena VR?</h2>
+      <p>
+        Un espacio físico donde te mueves libremente dentro del juego junto a tus amigos.
+        Sin cables, sin límites, viviendo la experiencia como si estuvieras dentro del mundo virtual.
       </p>
-      <img src="arena.jpg" alt="Arena VR" class="arena-img">
+      <img src="arena.jpg" class="arena-img">
     </section>
 
+    <!-- EXPERIENCIAS -->
     <section>
-      <p style="font-size:1.35rem; max-width:720px; margin:0 auto 35px; line-height:1.6;">
-        Dispara contra hordas interminables de zombies, compite con tus amigos en peleas de Kung Fu 
-        o resuelve ingeniosos puzzles en Escape Rooms virtuales.
+      <h2>Experiencias</h2>
+      <p>
+        Lucha contra zombies, domina el kung fu o resuelve escape rooms en equipo.
+        Cada partida es una aventura diferente.
       </p>
-      
+
       <div class="gallery">
-        <img src="arizona.jpg" alt="Arizona">
-        <img src="dragon.jpg" alt="Dragon">
-        <img src="parvus.jpg" alt="Parvus">
+        <div class="gallery-item">
+          <img src="arizona.jpg">
+          <p>Zombies</p>
+        </div>
+        <div class="gallery-item">
+          <img src="dragon.jpg">
+          <p>Kung Fu</p>
+        </div>
+        <div class="gallery-item">
+          <img src="parvus.jpg">
+          <p>Escape Room</p>
+        </div>
+      </div>
+
+      <div class="features">
+        👥 Grupos de 2 a 6 jugadores<br>
+        ⏱️ Sesiones dinámicas<br>
+        🧠 No necesitas experiencia previa
       </div>
     </section>
 
+    <!-- CTA FINAL -->
     <section>
-      <p style="font-size:1.55rem; max-width:700px; margin:40px auto 30px; line-height:1.6; font-weight: bold; color: white;">
-        TODO ESO Y MUCHO MÁS, MUY PRONTO EN CHICLANA DE LA FRONTERA
+      <p class="final-text">
+        Apertura inminente en Chiclana de la Frontera
       </p>
+
+      <a href="https://instagram.com/sectorunovr" class="button">
+        No perderme la apertura
+      </a>
     </section>
 
-    <footer style="margin-top:30px; padding:40px 20px;">
-      <p class="social-text">Síguenos en nuestras redes sociales y no te pierdas las ofertas de apertura.</p>
-      
-      <p class="social">
+    <!-- FOOTER -->
+    <footer>
+      <p class="social-text">
+        Síguenos en nuestras redes sociales
+      </p>
+
+      <div class="social">
         <a href="https://instagram.com/sectorunovr" target="_blank">
           <img src="instagram.png" alt="Instagram">
         </a>
         <a href="https://tiktok.com/@sectorunovr" target="_blank">
           <img src="tiktok.png" alt="TikTok">
         </a>
+      </div>
+
+      <p style="margin-top:20px;">
+        Chiclana de la Frontera · Cádiz
       </p>
 
-      <p style="margin-top:35px;">© 2026 Sector Uno VR</p>
+      <p style="margin-top:10px;">
+        © 2026 Sector Uno VR
+      </p>
     </footer>
+
   </div>
 </body>
 </html>
