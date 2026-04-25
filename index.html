@@ -43,6 +43,15 @@
       margin-bottom: 25px; 
       color: #ff00ff; 
     }
+    .arena-img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+      margin: 30px auto;
+      display: block;
+    }
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -52,7 +61,7 @@
     }
     .gallery img {
       width: 100%;
-      max-width: 420px;
+      max-width: 380px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
     }
@@ -98,50 +107,4 @@
 
     <section>
       <h2>¿Qué es una arena VR?</h2>
-      <p style="font-size:1.35rem; max-width:700px; margin:0 auto 40px; line-height:1.6;">
-        Es un espacio grande y diáfano, sin obstáculos, donde un grupo de personas se sumergen juntos en experiencias de realidad virtual.
-      </p>
-      <img src="arena.jpg" alt="Arena VR" style="max-width:700px; border-radius:12px; box-shadow:0 0 25px rgba(255,0,255,0.3);">
-    </section>
-
-    <section>
-      <h2>¿Y qué tipo de experiencias?</h2>
-      <p style="font-size:1.3rem; max-width:680px; margin:0 auto 40px;">
-        Desde disparar a hordas de zombies, pasando por peleas de Kung fu o escape rooms de todo tipo.
-      </p>
-      
-      <div class="gallery">
-        <img src="arizona.jpg" alt="Arizona">
-        <img src="dragon.jpg" alt="Dragon">
-        <img src="parvus.jpg" alt="Parvus">
-      </div>
-    </section>
-
-    <section>
-      <p style="font-size:1.35rem; max-width:700px; margin:40px auto; line-height:1.6;">
-        Si todavía no has probado la realidad virtual, es la mejor manera de hacerlo. 
-        Y si ya la has probado y crees que sabes lo que es, <strong>piensa de nuevo</strong>, en la arena no es como en el salón de tu casa.
-      </p>
-    </section>
-
-    <button class="btn" onclick="suscribirse()">Quiero ser de los primeros en abrir</button>
-
-    <footer style="margin-top:60px; padding:40px 20px;">
-      <p class="social">
-        <a href="https://instagram.com/sectorunovr" target="_blank">📸 Instagram</a>
-        <a href="https://tiktok.com/@sectorunovr" target="_blank">🎵 TikTok</a>
-      </p>
-      <p style="margin-top:30px; opacity:0.8;">Próxima apertura • Sector Uno VR</p>
-      <p>No te pierdas nuestras promociones de apertura</p>
-      <p>© 2026 Sector Uno VR</p>
-    </footer>
-  </div>
-
-  <script>
-    function suscribirse() {
-      const email = prompt("¡Genial! Déjanos tu correo y te avisaremos cuando abramos:");
-      if (email) alert("✅ Gracias! Te mantendremos informado en " + email);
-    }
-  </script>
-</body>
-</html>
+      <p style="font-size:1.35rem; max-width:700px; margin:0 auto
