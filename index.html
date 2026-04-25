@@ -37,7 +37,7 @@
 
     .social-text {
       font-size: 1.3rem;
-      margin: 30px 0 15px;   /* Reducido el espacio */
+      margin-bottom: 15px;
       color: #00ffff;
       text-shadow: 0 0 10px #00ffff;
     }
@@ -69,6 +69,28 @@
       max-width: 360px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    }
+
+    /* Eliminación total de la rayita */
+    .social a {
+      text-decoration: none !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    .social img {
+      width: 42px;
+      height: 42px;
+      margin: 0 15px;
+      display: inline-block;
+    }
+
+    @media (max-width: 600px) {
+      .social img {
+        width: 38px;
+        height: 38px;
+        margin: 0 12px;
+      }
     }
   </style>
 </head>
@@ -107,7 +129,7 @@
     </section>
 
     <footer style="margin-top:30px; padding:40px 20px;">
-      <p class="social-text">Síguenos en nuestras redes sociales</p>
+      <p class="social-text">¡Síguenos en nuestras redes sociales!</p>
       
       <p>
         <a href="https://instagram.com/sectorunovr" target="_blank">
@@ -117,7 +139,7 @@
           <img src="tiktok.png" alt="TikTok" width="42" height="42">
         </a>
       </p>
-      <p style="margin-top:30px;">© 2026 Sector Uno VR</p>
+      <p style="margin-top:35px;">© 2026 Sector Uno VR</p>
     </footer>
   </div>
 </body>
