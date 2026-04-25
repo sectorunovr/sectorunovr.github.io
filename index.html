@@ -3,131 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próxima Apertura - [Nombre de tu Negocio]</title>
+  <title>Sector Uno VR - Próxima Apertura</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500&display=swap');
     
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: white;
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat fixed;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover fixed;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
     }
-    .container { max-width: 800px; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4.8rem;
-      margin: 0 0 15px 0;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4.5rem;
+      margin: 40px 0 10px;
+      text-shadow: 0 0 20px #00ffcc;
     }
-    .subtitle { font-size: 1.9rem; margin-bottom: 30px; opacity: 0.95; }
-    .countdown {
+    .slogan {
+      font-size: 2.2rem;
+      color: #00ffcc;
+      margin-bottom: 30px;
+    }
+    .tagline {
+      font-size: 1.5rem;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+    section { margin: 80px 0; }
+    .gallery {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 40px 0;
       flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
     }
-    .time {
-      background: rgba(255,255,255,0.12);
-      padding: 18px 28px;
-      border-radius: 16px;
-      backdrop-filter: blur(12px);
-    }
-    .time span { display: block; font-size: 2.8rem; font-weight: bold; }
-    .btn {
-      background: #e63939;
-      color: white;
-      padding: 16px 45px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.25rem;
-      cursor: pointer;
-      margin: 20px 10px;
-      transition: 0.3s;
-    }
-    .btn:hover { background: #c1121f; transform: scale(1.08); }
-    input {
-      padding: 16px;
+    .gallery img {
       width: 100%;
       max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+    }
+    .btn {
+      background: #00ffcc;
+      color: black;
+      padding: 16px 40px;
       border: none;
       border-radius: 50px;
-      margin: 10px 0;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 20px;
+      transition: 0.3s;
     }
+    .btn:hover {
+      background: #ff00aa;
+      color: white;
+      transform: scale(1.05);
+    }
+    footer { margin-top: 80px; padding: 30px; opacity: 0.8; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Estamos llegando...</h1>
-    <p class="subtitle">[Nombre de tu Negocio]</p>
-    
-    <p style="font-size:1.35rem; max-width:620px; margin:0 auto 40px;">
-      Muy pronto abriremos con algo especial preparado para ti.
-    </p>
+    <h1>SECTOR UNO VR</h1>
+    <p class="slogan">Desafía la realidad.</p>
+    <p class="tagline">Si crees que conoces la realidad virtual, piensa de nuevo.</p>
 
-    <div class="countdown" id="countdown">
-      <div class="time"><span id="days">00</span><br>Días</div>
-      <div class="time"><span id="hours">00</span><br>Horas</div>
-      <div class="time"><span id="minutes">00</span><br>Min</div>
-      <div class="time"><span id="seconds">00</span><br>Seg</div>
-    </div>
-
-    <button class="btn" onclick="suscribirse()">Quiero ser de los primeros</button>
-
-    <div style="max-width:420px; margin:30px auto;">
-      <input type="email" id="email" placeholder="Tu correo electrónico" />
-      <button class="btn" style="background:#1d3557; width:100%; margin-top:10px;" onclick="guardarEmail()">Recibir novedades</button>
-    </div>
-
-    <footer style="margin-top:60px; opacity:0.85;">
-      <p>Síguenos en redes</p>
-      <p style="font-size:2rem;">
-        <a href="#" style="color:white; margin:0 15px;">📸</a>
-        <a href="#" style="color:white; margin:0 15px;">📘</a>
-        <a href="#" style="color:white; margin:0 15px;">🐦</a>
+    <section>
+      <h2>¿Qué es una Arena VR Free Roam?</h2>
+      <p style="font-size:1.3rem; max-width:700px; margin:0 auto;">
+        Es un espacio físico donde te mueves libremente con un visor VR y controles. 
+        No estás sentado ni atado: caminas, corres, te agachas y exploras mundos completamente inmersivos en grupo.
       </p>
-      <p style="margin-top:40px; font-size:0.95rem;">© 2026 [Nombre de tu Negocio]</p>
+    </section>
+
+    <section>
+      <h2>Experiencias que encontrarás</h2>
+      <p style="font-size:1.25rem; max-width:650px; margin:30px auto;">
+        Escape Rooms en equipo • Shooters de zombies • Aventuras cooperativas • 
+        Misiones de terror • Combate táctico y mucho más.
+      </p>
+      
+      <div class="gallery">
+        <img src="https://i.imgur.com/PLACEHOLDER1.jpg" alt="Arena VR">
+        <img src="https://i.imgur.com/PLACEHOLDER2.jpg" alt="Zombie Shooter">
+      </div>
+    </section>
+
+    <button class="btn" onclick="suscribirse()">Quiero ser de los primeros en probarlo</button>
+
+    <footer>
+      <p>Próxima apertura • Sector Uno VR</p>
+      <p style="font-size:2rem; margin:20px 0;">
+        📸 <a href="#" style="color:#00ffcc;">Instagram</a> • 
+        📘 <a href="#" style="color:#00ffcc;">Facebook</a>
+      </p>
+      <p>© 2026 Sector Uno VR</p>
     </footer>
   </div>
 
   <script>
-    const fechaApertura = new Date("2026-06-15T10:00:00").getTime(); // ← Cambia esta fecha
-
-    function actualizarContador() {
-      const ahora = new Date().getTime();
-      const distancia = fechaApertura - ahora;
-      if (distancia < 0) {
-        document.getElementById("countdown").innerHTML = "<h2>¡Ya estamos abiertos! 🎉</h2>";
-        return;
-      }
-      const days = Math.floor(distancia / (1000*60*60*24));
-      const hours = Math.floor((distancia % (1000*60*60*24)) / (1000*60*60));
-      const minutes = Math.floor((distancia % (1000*60*60)) / (1000*60));
-      const seconds = Math.floor((distancia % (1000*60)) / 1000);
-
-      document.getElementById("days").textContent = days.toString().padStart(2,'0');
-      document.getElementById("hours").textContent = hours.toString().padStart(2,'0');
-      document.getElementById("minutes").textContent = minutes.toString().padStart(2,'0');
-      document.getElementById("seconds").textContent = seconds.toString().padStart(2,'0');
-    }
-
-    setInterval(actualizarContador, 1000);
-    actualizarContador();
-
-    function suscribirse() { alert("¡Genial! Te avisaremos en cuanto abramos 🎉"); }
-    function guardarEmail() {
-      const email = document.getElementById("email").value;
+    function suscribirse() {
+      const email = prompt("¡Genial! Déjanos tu correo y te avisaremos en cuanto abramos:");
       if (email) {
         alert("✅ Gracias! Te mantendremos informado en " + email);
-        document.getElementById("email").value = "";
-      } else {
-        alert("Por favor escribe tu correo");
       }
     }
   </script>
