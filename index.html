@@ -86,16 +86,28 @@
       color: black;
       transform: scale(1.05);
     }
+
+    /* Iconos de redes sociales - Más pequeños */
     .social img {
-      width: 48px;          /* ← Más pequeño */
-      margin: 0 18px;
+      width: 42px;           /* ← Aún más pequeño */
+      height: 42px;
+      margin: 0 15px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      .social img {
+        width: 38px;         /* Aún más pequeño en móvil */
+        height: 38px;
+        margin: 0 12px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Logo -->
-    <img src="logo_1.png" alt="Sector Uno VR" class="logo">
+    <img src="logo.png" alt="Sector Uno VR" class="logo">
 
     <p class="slogan">Desafía la realidad</p>
     <p class="tagline">Si crees que conoces la realidad virtual, piensa de nuevo.</p>
