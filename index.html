@@ -19,18 +19,12 @@
 
     .logo {
       width: 100%;
-      max-width: 780px;           /* Más grande en escritorio */
-      margin: 30px auto 20px;
+      max-width: 650px;
+      margin: 40px auto 25px;
     }
 
-    /* Logo aún más grande en móviles */
     @media (max-width: 600px) {
-      .logo {
-        max-width: 85%;           /* ← Casi ocupa todo el ancho en móvil */
-        margin: 20px auto 15px;
-      }
-      .slogan { font-size: 2.4rem; }
-      h2 { font-size: 1.9rem; }
+      .logo { max-width: 85%; }
     }
     
     .slogan { 
@@ -92,11 +86,9 @@
       color: black;
       transform: scale(1.05);
     }
-    .social a {
-      font-size: 2.8rem;
-      margin: 0 25px;
-      color: white;
-      text-decoration: none;
+    .social img {
+      width: 60px;
+      margin: 0 20px;
     }
   </style>
 </head>
@@ -124,7 +116,6 @@
     </section>
 
     <section>
-      <h2>¿Y qué tipo de experiencias?</h2>
       <p style="font-size:1.35rem; max-width:720px; margin:0 auto 35px; line-height:1.6;">
         Dispara contra hordas interminables de zombies, compite con tus amigos en peleas de Kung fu 
         o resolved juntos los ingeniosos puzzles de un escape room.
@@ -139,21 +130,24 @@
 
     <section>
       <p style="font-size:1.35rem; max-width:700px; margin:40px auto; line-height:1.6;">
-        Si todavía no has probado la realidad virtual, este es el momento. 
+        Si todavía no has probado la realidad virtual, este es la mejor forma. 
         Y si ya la has probado y crees que sabes lo que es, piensa de nuevo, 
-        esto no es el salón de tu casa.
+        esto no es como el salón de tu casa.
       </p>
     </section>
 
     <button class="btn" onclick="suscribirse()">Quiero ser de los primeros en abrir</button>
 
     <footer style="margin-top:60px; padding:40px 20px;">
-      <p class="social">
-        <a href="https://instagram.com/sectorunovr" target="_blank">📸 Instagram</a>
-        <a href="https://tiktok.com/@sectorunovr" target="_blank">🎵 TikTok</a>
+      <p style="margin-bottom: 20px;">
+        <a href="https://instagram.com/sectorunovr" target="_blank">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://tiktok.com/@sectorunovr" target="_blank">
+          <img src="tiktok.png" alt="TikTok">
+        </a>
       </p>
       <p style="margin-top:30px; opacity:0.8;">Próxima apertura • Sector Uno VR</p>
-      <p>No te pierdas nuestras promociones de apertura</p>
       <p>© 2026 Sector Uno VR</p>
     </footer>
   </div>
