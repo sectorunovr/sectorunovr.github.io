@@ -14,39 +14,84 @@
       background: #000000;
       min-height: 100vh;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+    .container { 
+      max-width: 900px;
+      margin: 0 auto; 
+      padding: 20px; 
+    }
 
     .logo {
       width: 100%;
-      max-width: 680px;
-      margin: 60px auto 20px;
+      max-width: 640px;
+      margin: 80px auto 10px;
     }
 
     .subtitle {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #00ffff;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       font-weight: 600;
-      text-shadow: 0 0 20px #00ffff;
+      text-shadow: 0 0 18px #00ffff;
     }
 
-    section { margin: 80px 0; }
+    /* CTA principal */
+    .cta-button {
+      display: inline-block;
+      margin: 20px 0 60px;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      color: black;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.6);
+    }
+
+    section { margin: 100px 0; opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
+
     h2 { 
-      font-size: 2.3rem; 
+      font-size: 2.1rem; 
       margin-bottom: 25px; 
       color: #ff00ff; 
       font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    p {
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     .arena-img {
       width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.35);
+      margin: 40px auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .arena-img:hover {
+      transform: scale(1.02);
+    }
+
+    .video {
+      width: 100%;
       max-width: 720px;
       border-radius: 16px;
-      box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
       margin: 30px auto;
       display: block;
+      box-shadow: 0 0 25px rgba(0,255,255,0.2);
     }
 
     .gallery {
@@ -54,36 +99,73 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 40px;
     }
+
     .gallery img {
       width: 100%;
-      max-width: 340px;
+      max-width: 320px;
       border-radius: 16px;
       transition: all 0.4s ease;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     }
+
     .gallery img:hover {
       transform: scale(1.05);
       box-shadow: 0 20px 40px rgba(255, 0, 255, 0.5);
     }
 
+    .cta-final {
+      font-size: 1.5rem;
+      max-width: 780px;
+      margin: 40px auto;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+    }
+
     .social-text {
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       margin: 40px 0 20px;
       color: #00ffff;
-      text-shadow: 0 0 12px #00ffff;
+      text-shadow: 0 0 10px #00ffff;
     }
 
     .social img {
-      width: 48px;
-      height: 48px;
-      margin: 0 18px;
-      transition: transform 0.3s;
+      width: 44px;
+      height: 44px;
+      margin: 0 15px;
+      transition: transform 0.3s ease, opacity 0.3s;
+      opacity: 0.85;
     }
-    .social img:hover { transform: scale(1.15); }
 
-    footer p { margin: 15px 0; opacity: 0.85; }
+    .social img:hover { 
+      transform: scale(1.15);
+      opacity: 1;
+    }
+
+    footer p { 
+      margin: 12px 0; 
+      opacity: 0.8; 
+      font-size: 0.9rem;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -200px;
+      left: -200px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .logo { margin-top: 60px; }
+      h2 { font-size: 1.8rem; }
+      .subtitle { font-size: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -92,16 +174,25 @@
     
     <p class="subtitle">La primera ARENA VR de la provincia de Cádiz.</p>
 
+    <a href="https://instagram.com/sectorunovr" target="_blank" class="cta-button">
+      Síguenos para la apertura
+    </a>
+
     <section>
       <h2>¿Qué es una ARENA VR?</h2>
-      <p style="font-size:1.4rem; max-width:740px; margin:0 auto;">
+      <p style="font-size:1.3rem;">
         Un espacio grande y diáfano donde un grupo de personas se sumergen juntos en la realidad virtual.
       </p>
       <img src="arena.jpg" alt="Arena VR" class="arena-img">
     </section>
 
     <section>
-      <p style="font-size:1.4rem; max-width:740px; margin:0 auto 40px;">
+      <!-- VIDEO -->
+      <video class="video" autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+
+      <p style="font-size:1.3rem; margin-bottom:40px;">
         Dispara contra hordas interminables de zombies, compite con tus amigos en peleas de Kung fu 
         o resuelve ingeniosos puzzles en un Escape Room.
       </p>
@@ -114,7 +205,7 @@
     </section>
 
     <section>
-      <p style="font-size:1.6rem; max-width:800px; margin:40px auto; font-weight: bold; color: white;">
+      <p class="cta-final">
         TODO ESO Y MUCHO MÁS, MUY PRONTO EN CHICLANA DE LA FRONTERA
       </p>
     </section>
@@ -134,5 +225,20 @@
       <p style="margin-top:40px;">© 2026 Sector Uno VR</p>
     </footer>
   </div>
+
+  <script>
+    // Fade-in al hacer scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
 </body>
 </html>
